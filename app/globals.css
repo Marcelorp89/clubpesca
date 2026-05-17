@@ -10,17 +10,61 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /*Colores del club*/
+
+  --color-primary: #1a6fbe;         /* azul del logo */
+  --color-background: #f0f4f8;      /* gris azulado muy claro */
+  --color-foreground: #1a2332;      /* azul marino oscuro */
+  --color-primary-hover: #0d4a8a;   /* azul oscuro para hover */
+  --color-accent: #f5a623;          /* naranja del pez */
+  --color-accent-hover: #d4891a;    /* naranja oscuro para hover */
+  --color-surface: #ffffff;         /* blanco para cards */
+  --color-border: #d1dce8;          /* gris azulado para bordes */
+
+  --font-sans: var(--font-body);       /* Lato para párrafos */
+  --font-display: var(--font-display); /* Playfair para títulos */
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+}*/
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+h3 {
+  font-size: 1.5rem;  
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+p {
+  font-size: 1rem;     
+  line-height: 1.7;    
+  color: var(--color-foreground);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+#manotech{
+  color: var(--color-surface);
 }

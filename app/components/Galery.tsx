@@ -20,7 +20,6 @@ export default function Galery(){
                 <p className="text-foreground">Todo en un solo lugar.</p>
 
             <MotionLink 
-                    
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ duration: 0.2 }}

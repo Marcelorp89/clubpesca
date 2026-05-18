@@ -137,9 +137,14 @@ export default function Form(){
                         </p>
                     )}
 
-                     <button onClick={handleSubmit} className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent-hover transition duration-300">
+                     <motion.button 
+                        onClick={handleSubmit} 
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.2 }} 
+                        className="bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent-hover transition duration-300">
                         Enviar mensaje 
-                     </button>
+                     </motion.button>
 
                 </div>
 

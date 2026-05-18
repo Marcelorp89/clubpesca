@@ -7,6 +7,8 @@ import Footer from "../components/Footer";
 import Galery from "../components/Galery";
 import { useState } from "react";
 import Link from "next/link";
+import {motion} from "framer-motion";
+
 
 
 const campeonatos = [
@@ -123,7 +125,10 @@ export default function GaleryPage(){
 
           {/* Botones de tabs */}
           <div className="flex gap-4 mb-8">
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
               onClick={() => setTabActivo("campeonatos")}
               className={`px-6 py-2 rounded-lg transition duration-300 ${
                 tabActivo === "campeonatos"
@@ -132,9 +137,12 @@ export default function GaleryPage(){
               }`}
             >
               Campeonatos
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
               onClick={() => setTabActivo("paisajes")}
               className={`px-6 py-2 rounded-lg transition duration-300 ${
                 tabActivo === "paisajes"
@@ -143,7 +151,7 @@ export default function GaleryPage(){
               }`}
             >
               Paisajes de Toltén
-            </button>
+            </motion.button>
           </div>
 
           {/*Tab campeonatos*/}

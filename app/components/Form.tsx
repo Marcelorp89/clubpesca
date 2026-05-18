@@ -3,6 +3,10 @@
 
 import { useState } from "react";
 import {motion} from "framer-motion";
+import { FaMapMarker, FaEnvelope, FaPhoneAlt  } from "react-icons/fa";
+import Image from "next/image";
+
+
 
 
 export default function Form(){
@@ -50,23 +54,35 @@ export default function Form(){
             viewport={{ once: true }}
             className="max-w-6xl mx-auto px-6 py-6">
             
-            <motion.h2 
-                id="form" 
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7 }}
-                viewport={{ once: true }}
-                className="text-primary">Consultas</motion.h2>
-            <p className="text-foreground">¿Tienes alguna duda? Escríbenos</p>
+            
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <p className="text-foreground">Tolten</p>
-                    <p className="text-foreground">mail</p>
-                    <p className="text-foreground">telefono</p>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
+                <div className="bg-gradient-to-r from-orange-100 to-orange-50 rounded-2xl p-10">
+                    <motion.h2 
+                    id="form" 
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.7 }}
+                    viewport={{ once: true }}
+                    className="text-primary mb-4">Consultas</motion.h2>
+                        <p className="text-foreground mb-8">¿Tienes alguna duda? Escríbenos</p>
+
+                        <div className="flex flex-col gap-4">
+                            <p className="text-foreground flex items-center gap-2"><FaMapMarker className="text-accent" /> Toltén, La Araucanía</p>
+                            <p className="text-foreground flex items-center gap-2"><FaEnvelope className="text-accent" /> correo@correo.cl</p>
+                            <p className="text-foreground flex items-center gap-2"><FaPhoneAlt className="text-accent" /> +569 12345678</p>
+                        </div>
+
+                        <Image
+                            src="/logo-pesca.png"
+                            alt="logo"
+                            width={120}
+                            height={120}
+                            className="mt-25 opacity-50"
+                        />
                 </div>
 
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 bg-blue-50 rounded-2xl p-10">
 
                     <div>
                         <label htmlFor="nombre" className="text-foreground">Nombre</label>
@@ -84,7 +100,7 @@ export default function Form(){
                     </div>
 
                     <div>
-                        <label htmlFor="nombre" className="text-sm font-medium">Teléfono</label>
+                        <label htmlFor="telefono" className="text-sm font-medium">Teléfono</label>
                         <motion.input 
                             whileFocus={{ scale: 1.02 }}
                             transition={{ duration: 0.2 }}
@@ -99,7 +115,7 @@ export default function Form(){
                     </div>
                     
                     <div>
-                        <label htmlFor="nombre" className="text-sm font-medium">Correo</label>
+                        <label htmlFor="correo" className="text-sm font-medium">Correo</label>
                          <motion.input 
                             whileFocus={{ scale: 1.02 }}
                             transition={{ duration: 0.2 }}
@@ -113,7 +129,7 @@ export default function Form(){
                     </div>
 
                     <div>
-                        <label htmlFor="nombre" className="text-foreground">Correo</label>
+                        <label htmlFor="mensaje" className="text-foreground">Mensaje</label>
                         <motion.textarea 
                             whileFocus={{ scale: 1.02 }}
                             transition={{ duration: 0.2 }}

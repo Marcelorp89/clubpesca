@@ -11,7 +11,7 @@ import Footer from "./components/Footer"
 export default function Home() {
   return (
     <>
-      <main className="flex-1">
+      <main className="flex-1 pt-24">
         <Navbar />
         <Hero />
         <About />

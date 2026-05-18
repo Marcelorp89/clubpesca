@@ -39,16 +39,22 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1{
+  margin-bottom: 1rem;
+}
+
 h2{
   font-size: 2rem;
   font-weight: 700;
   color: var(--color-primary);
+  margin-bottom: 0.75rem;
 }
 
 h3 {
   font-size: 1.5rem;  
   font-weight: 600;
   color: var(--color-primary);
+  margin-bottom: 0.5rem;
 }
 
 p {
@@ -59,6 +65,7 @@ p {
 
 h1, h2, h3 {
   font-family: var(--font-display);
+  letter-spacing: 0.04em;
 }
 
 body {

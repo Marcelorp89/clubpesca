@@ -26,12 +26,12 @@ export default function Navbar() {
 
         {/* Links desktop — se ocultan en móvil */}
         <ul className="hidden md:flex gap-6">
-          <li><Link href="/#about">Nosotros</Link></li>
-          <li><Link href="/directorio">Directorio</Link></li>
-          <li><Link href="/#event">Calendario</Link></li>
-          <li><Link href="/#mapa">Mapa</Link></li>
-          <li><Link href="/galeria">Galería</Link></li>
-          <li><Link href="/#form">Contacto</Link></li>
+          <li><Link href="/#about" className="hover:text-accent transition duration-300">Nosotros</Link></li>
+          <li><Link href="/directorio" className="hover:text-accent transition duration-300">Directorio</Link></li>
+          <li><Link href="/#event" className="hover:text-accent transition duration-300">Calendario</Link></li>
+          <li><Link href="/#mapa" className="hover:text-accent transition duration-300">Mapa</Link></li>
+          <li><Link href="/galeria" className="hover:text-accent transition duration-300">Galería</Link></li>
+          <li><Link href="/#form" className="hover:text-accent transition duration-300">Contacto</Link></li>
         </ul>
 
         {/* Botón hamburguesa — solo visible en móvil */}
@@ -47,12 +47,12 @@ export default function Navbar() {
       {/* Menú móvil — se muestra solo cuando está abierto */}
       {menuAbierto && (
         <ul className="md:hidden flex flex-col gap-4 px-6 py-4 bg-primary-hover">
-          <li><Link href="/#about" onClick={() => setMenuAbierto(false)}>Nosotros</Link></li>
-          <li><Link href="/directorio" onClick={() => setMenuAbierto(false)}>Directorio</Link></li>
-          <li><Link href="/#event" onClick={() => setMenuAbierto(false)}>Calendario</Link></li>
-          <li><Link href="/#mapa" onClick={() => setMenuAbierto(false)}>Mapa</Link></li>
-          <li><Link href="/galeria" onClick={() => setMenuAbierto(false)}>Galería</Link></li>
-          <li><Link href="/#form" onClick={() => setMenuAbierto(false)}>Contacto</Link></li>
+          <li><Link href="/#about" className="hover:text-accent transition duration-300" onClick={() => setMenuAbierto(false)}>Nosotros</Link></li>
+          <li><Link href="/directorio" className="hover:text-accent transition duration-300" onClick={() => setMenuAbierto(false)}>Directorio</Link></li>
+          <li><Link href="/#event" className="hover:text-accent transition duration-300" onClick={() => setMenuAbierto(false)}>Calendario</Link></li>
+          <li><Link href="/#mapa" className="hover:text-accent transition duration-300" onClick={() => setMenuAbierto(false)}>Mapa</Link></li>
+          <li><Link href="/galeria" className="hover:text-accent transition duration-300" onClick={() => setMenuAbierto(false)}>Galería</Link></li>
+          <li><Link href="/#form" className="hover:text-accent transition duration-300" onClick={() => setMenuAbierto(false)}>Contacto</Link></li>
         </ul>
       )}
 

@@ -2,6 +2,8 @@
 "use client";
 
 import { useState } from "react";
+import {motion} from "framer-motion";
+
 
 export default function Form(){
 
@@ -11,6 +13,7 @@ export default function Form(){
         email: "",
         mensaje: ""
     });
+    
 
     const [estadoEnvio, setEstadoEnvio] = useState<string | null>(null);
 
@@ -39,8 +42,21 @@ export default function Form(){
 };
 
     return(
-        <section id="form" className="max-w-6xl mx-auto px-6 py-6">
-            <h2 className="text-primary">Consultas</h2>
+        <motion.section 
+            id="form" 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto px-6 py-6">
+            
+            <motion.h2 
+                id="form" 
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true }}
+                className="text-primary">Consultas</motion.h2>
             <p className="text-foreground">¿Tienes alguna duda? Escríbenos</p>
 
             <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -54,7 +70,9 @@ export default function Form(){
 
                     <div>
                         <label htmlFor="nombre" className="text-foreground">Nombre</label>
-                        <input 
+                        <motion.input 
+                            whileFocus={{ scale: 1.02 }}
+                            transition={{ duration: 0.2 }}
                             type="text"
                             name="nombre"
                             placeholder="Ingrese su nombre"
@@ -67,7 +85,9 @@ export default function Form(){
 
                     <div>
                         <label htmlFor="nombre" className="text-sm font-medium">Teléfono</label>
-                        <input 
+                        <motion.input 
+                            whileFocus={{ scale: 1.02 }}
+                            transition={{ duration: 0.2 }}
                             type="text"
                             name="telefono"
                             placeholder="Ingrese su teléfono"
@@ -80,7 +100,9 @@ export default function Form(){
                     
                     <div>
                         <label htmlFor="nombre" className="text-sm font-medium">Correo</label>
-                         <input 
+                         <motion.input 
+                            whileFocus={{ scale: 1.02 }}
+                            transition={{ duration: 0.2 }}
                             type="text"
                             name="email"
                             placeholder="Ingrese su correo"
@@ -92,7 +114,9 @@ export default function Form(){
 
                     <div>
                         <label htmlFor="nombre" className="text-foreground">Correo</label>
-                        <textarea 
+                        <motion.textarea 
+                            whileFocus={{ scale: 1.02 }}
+                            transition={{ duration: 0.2 }}
                             name="mensaje"
                             placeholder="Deje su mensaje"
                             value={formulario.mensaje}
@@ -121,6 +145,6 @@ export default function Form(){
 
             </div>
 
-        </section>
+        </motion.section>
     );
 }

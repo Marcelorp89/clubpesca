@@ -1,14 +1,24 @@
+"use client"
+
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 
 interface Props{
     nombre: string;
     cargo: string;
     foto: string;
+    index: number;
 }
 
-export default function DirectorioCard({ nombre, cargo, foto }: Props) {
+export default function DirectorioCard({ nombre, cargo, foto, index }: Props) {
   return (
-    <div className="flex flex-col items-center text-center p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition duration-300 bg-surface border border-border">
+    <motion.div 
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.2 }}
+        viewport={{ once: true }}
+        className="flex flex-col items-center text-center p-6 rounded-lg shadow-md hover:scale-105 hover:shadow-xl transition duration-300 bg-surface border border-border">
       
       {/* Foto */}
       <Image
@@ -26,6 +36,6 @@ export default function DirectorioCard({ nombre, cargo, foto }: Props) {
       <p className="text-sm text-accent">{cargo}</p>
 
       
-    </div>
+    </motion.div>
   );
 }

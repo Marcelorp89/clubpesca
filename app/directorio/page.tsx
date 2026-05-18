@@ -19,8 +19,10 @@ export default function Directorio() {
 
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {directivos.map((persona) => (
-              <DirectorioCard key={persona.nombre} {...persona} />
+            {directivos.map((persona, index) => (
+              <DirectorioCard key={persona.nombre}
+                              {...persona}
+                              index={index} />
             ))}
           </div>
         </div>
